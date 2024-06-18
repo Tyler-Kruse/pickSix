@@ -51,9 +51,6 @@ def get_player_totals(player_dict):
     return player_avg
 
 def get_team_games(start_date, end_date):
-    #teams = {value[1] for value in players.baseball_heroes_test.values()}
-    #teams_list = list(teams)
-    #print(teams_list)
     start = datetime.strptime(start_date, '%Y%m%d').date()
     end = datetime.strptime(end_date, '%Y%m%d').date()
 
