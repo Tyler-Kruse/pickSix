@@ -1,6 +1,10 @@
 baseball_heroes_test = {"gaveler": ['Aaron Judge', 'NYY', '592450', 44000],
                         "chosen": ['Juan Soto', 'NYY', '665742' , 24400],
-                        "gigawitt": ['Bobby Witt', 'KC', '677951', 26400]}
+                        "gigawitt": ['Bobby Witt', 'KC', '677951', 26400],
+                        "showtime": ['Shohei Ohtani', 'LAD', '660271', 22000], 
+                        "ram": ['Jose Ramirez', 'CLE', '608070', 21900], 
+                        "cruze-control": ['Elly De La Cruz', 'CIN', '682829', 21000], 
+                        "gambler": ['Mookie Betts', 'LAD', '605141', 20875]}
 
 baseball_heroes = {"gaveler": ['Aaron Judge', 'NYY', '592450', 44000],
                     "chosen": ['Juan Soto', 'NYY', '665742' , 24400],
@@ -17,7 +21,7 @@ baseball_heroes = {"gaveler": ['Aaron Judge', 'NYY', '592450', 44000],
                     "snowbear": ['Pete Alonso', 'NYM', '624413', 19875], 
                     "bomber": ['Yordan Alvarez', 'HOU', '670541', 18600], 
                     "alien": ['CJ Abrams', 'WAS', '682928', 14400], 
-                    "superbaby": ['Rafael Devers', 'BOS', '672701', 20600], 
+                    "superbaby": ['Rafael Devers', 'BOS', '646240', 20600], 
                     "crushman": ['Adley Rutschman', 'BAL', '668939', 20800], 
                     "cowboy": ['Corey Seager', 'TEX', '608369', 24000], 
                     "lightningrod": ['Julio Rodriguez', 'SEA', '677594', 15800], 

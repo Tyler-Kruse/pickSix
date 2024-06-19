@@ -8,6 +8,7 @@ from collections import Counter
 
 load_dotenv()
 conn = http.client.HTTPSConnection("tank01-mlb-live-in-game-real-time-statistics.p.rapidapi.com")
+bpconn = http.client.HTTPSConnection("api.pick6.collecthth.com")
 
 headers = {
     'x-rapidapi-key': os.getenv('RAPIDAPI_KEY'),
@@ -72,3 +73,17 @@ def get_team_games(start_date, end_date):
         cur_date += timedelta(days=1)
     game_count = Counter(team_games)
     return game_count
+
+def get_player_projections():
+    bpconn.request("GET", "/api/season/2024")
+    res = bpconn.getresponse()
+    data = res.read()
+    data_str = data.decode("utf-8")
+    data_dict = json.loads(data_str)
+    hero_dict = data_dict['data']['weeks']['current']['heroes']
+    for hero in hero_dict:
+        lower_name = hero['hero_name'].lower()
+        hero_data = players.baseball_heroes.get(lower_name)
+        if hero_data:
+            players.baseball_heroes[lower_name][3] = hero['projected_points']
+    return players.baseball_heroes
